@@ -18,3 +18,22 @@ body {
   background: ivory;
   display: flex;
 }
+
+.clear-btn {
+  width: 120px;
+  font-size: 20px;
+  padding: 20px;
+  border-radius: 5px;
+  background: rgb(49, 91, 207);
+  color: rgb(201, 174, 25);
+  font-weight: bold;
+  margin: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.clear-btn:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
