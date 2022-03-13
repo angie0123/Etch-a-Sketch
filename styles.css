@@ -18,10 +18,3 @@ body {
   background: ivory;
   display: flex;
 }
-.column {
-  border: 1px solid black;
-}
-
-.square {
-  border: 1px solid black;
-}

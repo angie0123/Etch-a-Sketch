@@ -18,9 +18,14 @@ for (let i = 0; i < 16; i++) {
     const square = document.createElement("div");
     square.classList.add("square");
     square.style.height = `${squareLength}px`;
+    square.addEventListener("mouseover", paintSquare);
     columnContainer.appendChild(square);
   }
 
   //   columnContainer.style.width = unitHeight;
   gridContainer.appendChild(columnContainer);
+}
+
+function paintSquare() {
+  this.style.background = "black";
 }
