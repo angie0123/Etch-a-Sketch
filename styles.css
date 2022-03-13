@@ -4,5 +4,24 @@
   margin: 0;
 }
 body {
-  background: black;
+  background: #efefef;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.grid-container {
+  width: 500px;
+  height: 500px;
+  background: ivory;
+  display: flex;
+}
+.column {
+  border: 1px solid black;
+}
+
+.square {
+  border: 1px solid black;
 }
