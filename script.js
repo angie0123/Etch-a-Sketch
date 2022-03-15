@@ -27,6 +27,13 @@ function paintSquare() {
   this.style.background = "black";
 }
 
+function initHeader() {
+  const title = document.createElement("h1");
+  title.classList.add("title");
+  title.textContent = "Etch-A-Sketch";
+  body.appendChild(title);
+}
+
 function initMenu() {
   const clearBtn = document.createElement("div");
   const slider = document.createElement("input");
@@ -61,5 +68,6 @@ function clearGrid(squaresPerSide) {
   initGrid(squaresPerSide);
 }
 
+initHeader();
 initMenu();
 initGrid(100);
