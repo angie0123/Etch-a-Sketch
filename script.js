@@ -4,7 +4,7 @@ const GRID_WIDTH = 500;
 
 // Will fill 16 columns with 16 squares each , as divs stack on top
 function initGrid(squaresPerSide) {
-  let squareLength = Math.floor(GRID_HEIGHT / squaresPerSide);
+  let squareLength = GRID_HEIGHT / squaresPerSide;
   const gridContainer = document.createElement("div");
   gridContainer.classList.add("grid-container");
   body.appendChild(gridContainer);
