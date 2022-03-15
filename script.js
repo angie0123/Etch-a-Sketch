@@ -29,12 +29,8 @@ function paintSquare() {
 
 function initMenu() {
   const clearBtn = document.createElement("div");
-  clearBtn.classList.add("clear-btn");
-  clearBtn.textContent = "Clear";
-  clearBtn.addEventListener("click", clearGrid);
-  body.appendChild(clearBtn);
-
   const slider = document.createElement("input");
+
   slider.type = "range";
   slider.min = 1;
   slider.max = 100;
@@ -42,15 +38,21 @@ function initMenu() {
   slider.classList.add("slider");
   const sliderValueMessage = document.createElement("div");
   sliderValueMessage.textContent = `${slider.value} x ${slider.value}`;
-
-  body.appendChild(slider);
-  body.appendChild(sliderValueMessage);
-
   slider.addEventListener("input", () => {
     squaresPerSide = slider.value;
     sliderValueMessage.textContent = `${slider.value} x ${slider.value}`;
     clearGrid(squaresPerSide);
   });
+
+  clearBtn.classList.add("clear-btn");
+  clearBtn.textContent = "Clear";
+  clearBtn.addEventListener("click", () => {
+    clearGrid(slider.value);
+  });
+
+  body.appendChild(clearBtn);
+  body.appendChild(slider);
+  body.appendChild(sliderValueMessage);
 }
 
 function clearGrid(squaresPerSide) {
